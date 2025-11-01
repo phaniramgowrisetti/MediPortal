@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -66,10 +67,12 @@
 
         .diet-btn.active {
             background-color: #ef4444;
+            /* Red for Balanced Diet */
             color: white;
             box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
         }
 
+        /* Chatbot styles */
         .chat-bubble-user {
             background-color: #0ea5e9;
             color: white;
@@ -78,22 +81,6 @@
         .chat-bubble-bot {
             background-color: #e2e8f0;
             color: #1e293b;
-        }
-
-        .test-result-normal {
-            color: #10b981;
-        }
-
-        .test-result-abnormal {
-            color: #ef4444;
-        }
-
-        .test-result-border-normal {
-            border-left: 4px solid #10b981;
-        }
-
-        .test-result-border-abnormal {
-            border-left: 4px solid #ef4444;
         }
     </style>
 </head>
@@ -310,42 +297,41 @@
                         </svg>
                         Back
                     </button>
+                    
                     <div class="bg-sky-100/50 p-2 rounded-xl inline-flex mb-6 gap-2">
                         <button class="tab-btn active py-2 px-6 rounded-lg" data-tab="report-content">Medical
                             Reports</button>
                         <button class="tab-btn py-2 px-6 rounded-lg text-gray-600"
                             data-tab="prescription-content">Prescription</button>
-                        <button class="tab-btn py-2 px-6 rounded-lg text-gray-600"
-                            data-tab="blood-test-content">Blood Tests</button>
                     </div>
 
-                    <div id="report-content" class="tab-content">
+                     <div id="report-content" class="tab-content">
                         <div class="card p-6">
                             <h3 class="text-xl font-bold text-gray-800 mb-4">Report type : Blood Test Report</h3>
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <div class="mb-4">
                                         <p class="font-bold">Patient Details :</p>
-                                        <p>Name : Allu Arjun</p>
+                                        <p>Name : deva</p>
                                         <p>Age : 39Yrs</p>
                                         <p>Gender : Male</p>
                                     </div>
                                     <div>
                                         <p class="font-bold">Doctor Details :</p>
-                                        <p>Name : Dr.Gajaala (pathology)</p>
+                                        <p>Name : Dr.hari (pathology)</p>
                                         <p>Hospital : KIMS hospital</p>
-                                    </div>
+                                   </div>
                                     <div class="card mt-6 p-4 border border-sky-200">
                                         <p class="font-semibold mb-4">🔗 Blood_test_report.pdf</p>
                                         <div class="flex gap-4">
                                             <button
                                                 class="view-btn w-full bg-sky-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-600 transition"
-                                                data-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                                                data-src="./blood_report.pdf"
                                                 data-title="Blood Test Report">View</button>
                                             <button
                                                 class="download-btn w-full bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 transition"
-                                                data-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                                                data-filename="Blood_test_report.pdf">Download</button>
+                                                data-src="./blood_report.pdf"
+                                                data-filename="blood_report.pdf">Download</button>
                                         </div>
                                     </div>
                                 </div>
@@ -380,13 +366,13 @@
                                 <div>
                                     <div class="mb-4">
                                         <p class="font-bold">Patient Details :</p>
-                                        <p>Name : Allu Arjun</p>
+                                        <p>Name : deva</p>
                                         <p>Age / Gender: 32 / Male</p>
                                         <p>Patient ID: MP-102345</p>
                                     </div>
                                     <div>
                                         <p class="font-bold">Doctor Details :</p>
-                                        <p>Name : Dr.Gajaala (pathology)</p>
+                                        <p>Name : Dr.hari (pathology)</p>
                                         <p>Hospital : KIMS hospital</p>
                                     </div>
                                     <div class="card mt-6 p-4 border border-sky-200">
@@ -394,7 +380,7 @@
                                         <div class="flex gap-4">
                                             <button
                                                 class="view-btn w-full bg-sky-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-600 transition"
-                                                data-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+                                                data-src="https://ibb.co/GwfpQfP"
                                                 data-title="Digital Prescription">View</button>
                                             <button
                                                 class="download-btn w-full bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 transition"
@@ -422,162 +408,6 @@
                                         <p class="text-sm text-amber-900">Drink plenty of water. Take medicines after
                                             meals. Report any allergic reactions immediately. Follow up after 7 days.
                                         </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blood Test Section -->
-                    <div id="blood-test-content" class="tab-content hidden">
-                        <div class="card p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Blood Test Analysis</h3>
-                            <div class="flex flex-col md:flex-row gap-6">
-                                <div class="md:w-2/3">
-                                    <div class="card p-4 mb-6 bg-sky-50">
-                                        <h4 class="font-bold text-lg text-sky-800 mb-2">Test Overview</h4>
-                                        <div class="grid grid-cols-2 gap-4">
-                                            <div>
-                                                <p class="text-sm text-gray-600">Test Date</p>
-                                                <p class="font-semibold">Oct 5, 2024</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm text-gray-600">Lab Reference</p>
-                                                <p class="font-semibold">KIMS Diagnostic Center</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm text-gray-600">Report ID</p>
-                                                <p class="font-semibold">BT-2024-10-005</p>
-                                            </div>
-                                            <div>
-                                                <p class="text-sm text-gray-600">Status</p>
-                                                <p class="font-semibold text-green-600">Completed</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card p-4 mb-6">
-                                        <h4 class="font-bold text-lg text-sky-800 mb-4">Complete Blood Count (CBC)</h4>
-                                        <div class="space-y-4">
-                                            <div class="test-result-border-normal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">Hemoglobin</p>
-                                                    <p class="test-result-normal">13.6 g/dL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Normal Range: 13.5 - 17.5 g/dL</p>
-                                            </div>
-                                            <div class="test-result-border-normal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">RBC Count</p>
-                                                    <p class="test-result-normal">4.8 million/µL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Normal Range: 4.5 - 5.9 million/µL</p>
-                                            </div>
-                                            <div class="test-result-border-abnormal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">WBC Count</p>
-                                                    <p class="test-result-abnormal">11,200 /µL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Normal Range: 4,000 - 11,000 /µL</p>
-                                                <p class="text-xs text-red-600 mt-1">Slightly elevated - possible mild infection</p>
-                                            </div>
-                                            <div class="test-result-border-normal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">Platelets</p>
-                                                    <p class="test-result-normal">230,000 /µL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Normal Range: 150,000 - 450,000 /µL</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card p-4">
-                                        <h4 class="font-bold text-lg text-sky-800 mb-4">Lipid Profile</h4>
-                                        <div class="space-y-4">
-                                            <div class="test-result-border-normal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">Total Cholesterol</p>
-                                                    <p class="test-result-normal">185 mg/dL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Desirable: < 200 mg/dL</p>
-                                            </div>
-                                            <div class="test-result-border-normal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">HDL (Good Cholesterol)</p>
-                                                    <p class="test-result-normal">55 mg/dL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Optimal: > 40 mg/dL</p>
-                                            </div>
-                                            <div class="test-result-border-normal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">LDL (Bad Cholesterol)</p>
-                                                    <p class="test-result-normal">110 mg/dL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Optimal: < 100 mg/dL</p>
-                                            </div>
-                                            <div class="test-result-border-normal p-3 bg-white rounded-lg">
-                                                <div class="flex justify-between items-center">
-                                                    <p class="font-semibold">Triglycerides</p>
-                                                    <p class="test-result-normal">120 mg/dL</p>
-                                                </div>
-                                                <p class="text-sm text-gray-600">Normal: < 150 mg/dL</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="md:w-1/3">
-                                    <div class="card p-4 bg-sky-100/70 mb-6">
-                                        <h4 class="font-bold text-lg text-sky-800 mb-4">Test Summary</h4>
-                                        <div class="space-y-2 mb-4">
-                                            <div class="flex justify-between">
-                                                <p>Tests Performed</p>
-                                                <p class="font-semibold">12</p>
-                                            </div>
-                                            <div class="flex justify-between">
-                                                <p>Normal Results</p>
-                                                <p class="font-semibold text-green-600">10</p>
-                                            </div>
-                                            <div class="flex justify-between">
-                                                <p>Abnormal Results</p>
-                                                <p class="font-semibold text-red-600">2</p>
-                                            </div>
-                                            <div class="flex justify-between">
-                                                <p>Critical Values</p>
-                                                <p class="font-semibold">0</p>
-                                            </div>
-                                        </div>
-                                        <div class="h-40">
-                                            <canvas id="bloodTestChart"></canvas>
-                                        </div>
-                                    </div>
-
-                                    <div class="card p-4 bg-amber-100/70">
-                                        <h4 class="font-bold text-lg text-amber-800 mb-2">Doctor's Interpretation</h4>
-                                        <p class="text-sm text-amber-900 mb-4">Overall blood test results are good with minor elevation in WBC count suggesting possible mild infection. Lipid profile is within healthy ranges. No immediate concerns.</p>
-                                        <div>
-                                            <p class="font-semibold text-amber-800">Recommendations:</p>
-                                            <ul class="text-sm text-amber-900 list-disc ml-4 mt-2">
-                                                <li>Complete the prescribed antibiotic course</li>
-                                                <li>Maintain current healthy lifestyle</li>
-                                                <li>Follow up if symptoms persist</li>
-                                                <li>Next test recommended in 6 months</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="card p-4 mt-6 border border-sky-200">
-                                        <p class="font-semibold mb-4">🔗 Complete_Blood_Test_Report.pdf</p>
-                                        <div class="flex gap-4">
-                                            <button
-                                                class="view-btn w-full bg-sky-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-600 transition"
-                                                data-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                                                data-title="Complete Blood Test Report">View</button>
-                                            <button
-                                                class="download-btn w-full bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-300 transition"
-                                                data-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                                                data-filename="Complete_Blood_Test_Report.pdf">Download</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -672,6 +502,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div id="medicines-page" class="page">
                     <button class="nav-item back-btn flex items-center gap-2 text-sky-700 font-semibold mb-4">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -847,7 +679,6 @@
             const viewBtns = document.querySelectorAll('.view-btn');
             const downloadBtns = document.querySelectorAll('.download-btn');
             let bpChartInstance = null;
-            let bloodTestChartInstance = null;
 
             // --- Diet Plan Data ---
             const dietData = {
@@ -904,44 +735,6 @@
                 `;
             }
 
-            // --- Blood Test Chart ---
-            function initializeBloodTestChart() {
-                if (bloodTestChartInstance) {
-                    bloodTestChartInstance.destroy();
-                }
-                const ctx = document.getElementById('bloodTestChart');
-                if (!ctx) return;
-
-                bloodTestChartInstance = new Chart(ctx.getContext('2d'), {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Normal', 'Abnormal'],
-                        datasets: [{
-                            data: [10, 2],
-                            backgroundColor: [
-                                '#10b981',
-                                '#ef4444'
-                            ],
-                            borderWidth: 0
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'bottom',
-                                labels: {
-                                    boxWidth: 12,
-                                    padding: 15
-                                }
-                            }
-                        },
-                        cutout: '70%'
-                    }
-                });
-            }
-
             // --- Sidebar Toggle ---
             menuBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -970,37 +763,34 @@
                     data: {
                         labels: labels,
                         datasets: [
-                            // Dataset 1: Normal Range (Bottom) - hidden from legend/tooltip
                             {
-                                data: fillArray(90), // Normal range starts at 90
+                                data: fillArray(90), 
                                 borderColor: 'transparent',
                                 pointRadius: 0,
                             },
-                            // Dataset 2: Normal Range (Top) & Fill
                             {
                                 label: 'Normal Range (90-120 mmHg)',
-                                data: fillArray(120), // Normal range ends at 120
-                                borderColor: 'transparent', // No line
+                                data: fillArray(120), 
+                                borderColor: 'transparent', 
                                 pointRadius: 0,
-                                fill: 0, // Fill down to dataset at index 0
-                                backgroundColor: 'rgba(22, 163, 74, 0.2)', // Transparent green
+                                fill: 0, 
+                                backgroundColor: 'rgba(22, 163, 74, 0.2)', 
                             },
-                            // Dataset 3: The actual Systolic data line
                             {
                                 label: 'Systolic',
                                 data: [120, 122, 118, 125, 123, 121, 120, 119, 122, 118],
-                                borderColor: '#3b82f6', // Bright blue line
+                                borderColor: '#3b82f6', 
                                 backgroundColor: 'rgba(59, 130, 246, 0.1)',
                                 tension: 0.3,
-                                fill: false, // Don't fill this line
-                                pointRadius: 4, // Add dots for each reading
+                                fill: false, 
+                                pointRadius: 4, 
                                 pointBackgroundColor: '#3b82f6',
                             }
                         ]
                     },
                     options: {
                         responsive: true,
-                        maintainAspectRatio: false,
+                        maintainAspectRatio: false, 
                         plugins: {
                             legend: {
                                 labels: {
@@ -1016,7 +806,7 @@
                         scales: {
                             y: {
                                 beginAtZero: false,
-                                min: 60,
+                                min: 60, 
                                 title: {
                                     display: true,
                                     text: 'Systolic Pressure (mmHg)'
@@ -1048,9 +838,6 @@
                     const activeDietBtn = document.querySelector('.diet-btn.active');
                     updateDietPlan(activeDietBtn.dataset.diet);
                 }
-                if (pageId === 'reports-page') {
-                    initializeBloodTestChart();
-                }
             }
 
             navItems.forEach(item => {
@@ -1075,10 +862,6 @@
                     tabContents.forEach(content => {
                         content.id === tabId ? content.classList.remove('hidden') : content.classList.add('hidden');
                     });
-                    
-                    if (tabId === 'blood-test-content') {
-                        initializeBloodTestChart();
-                    }
                 });
             });
 
@@ -1163,6 +946,10 @@
                     document.body.removeChild(a);
                 });
             });
+
+            
+            // --- PDF GENERATION LOGIC (Removed) ---
+
 
             // Initial page load
             showPage('dashboard-page');
